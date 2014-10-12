@@ -9,10 +9,8 @@ subdata$Voltage=as.character(subdata$Voltage)
 
 
 
+png("plot1.png") 
 
-png("plot2.png")
-
-plot(subdata$Global_active_power, type="l",xaxt="n",xlab="",ylab="Global Active Power (Kilowatts)")
-axis(1,at=c(0,1440,2880),labels=c("Thu","Fri","Sat"))
+hist(subdata$Global_active_power,col="red",xlab="Global Active Power (Kilowatts)", main="Global Active Power")
 
 dev.off()
